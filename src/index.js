@@ -12,7 +12,7 @@ function random (number) {
     return getRandomItem()
   } else {
     var items = []
-    for (var i = 0; i < number; i++) {
+    for (var i = 1; i < number; i++) {
       items.push(getRandomItem())
     }
     return items

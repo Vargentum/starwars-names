@@ -1,14 +1,16 @@
 {
   "name": "starwars-names-vargentum",
-  "version": "1.2.0-beta.0",
   "description": "\"Names generator\"",
+  "version": "0.0.0-semantically-released",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/*.test.js -w"
+    "test": "mocha src/*.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vargentum/starwars-names.git"
+    "url": "https://github.com/Vargentum/starwars-names.git"
   },
   "keywords": [
     "starwars",
@@ -25,6 +27,12 @@
   },
   "devDependencies": {
     "chai": "3.5.0",
-    "mocha": "3.0.2"
+    "commitizen": "2.8.6",
+    "cz-conventional-changelog": "1.2.0",
+    "mocha": "3.0.2",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }

@@ -22,11 +22,21 @@ describe('starwars-names', function() {
   })
 
   describe('random', function() {
-    var actual = starWarsNames.random()
-  
+
     it('should return a random item from allNames', function() {
+      var actual = starWarsNames.random()
       expect(allNames).to.include(actual)
     })
+
+    it('should return an array of items, if provided a number', function() {
+      var actual = starWarsNames.random(3)
+
+      expect(actual).to.be.an('array');
+      expect(actual).to.has.length(3);
+      actual.forEach(function(item) {
+        expect(allNames).to.include(item);
+      })
+    });
   })
   
 })

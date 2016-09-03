@@ -1,6 +1,6 @@
 {
   "name": "starwars-names-vargentum",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "\"Names generator\"",
   "main": "index.js",
   "scripts": {
